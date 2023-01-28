@@ -1,10 +1,16 @@
 import Product from "./Product";
+import Coupon from "./Coupon";
 
 export default class Order {
+       
+    private products: any[] = []; 
+    private coupons: Coupon[] = [];   
     
-    private quantity:number;
+    public addProduct(product: Product, qt: number) {
+        this.products.push({qt,product});
+    }
     
-    constructor(product: Product, quantity:number) {
-        this.quantity = quantity;
-    }    
+    public giveDiscount(coupon: Coupon) {
+        this.coupons.push(coupon);
+    }
 }
