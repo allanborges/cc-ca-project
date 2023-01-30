@@ -1,10 +1,6 @@
 import Product from "./Product";
 import Order from "./Order";
 
-const readline = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
  
 
 (function() {
